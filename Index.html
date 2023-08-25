@@ -1,196 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Mon site web avec Bootstrap</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
-  <style>
-    /* Styles personnalisés */
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', sans-serif;
-    }
-    .navbar-brand {
-      font-weight: bold;
-      color: #BD8445;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 1000;
-    }
-    .logonavbar {
-        position: relative;
-        width: auto;
-        height: 35px;
-    }
+<html lang="fr">
+  <head>
+    <title>OGCAO Dessins 3D Techniques</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script src="script.js"></script>
 
-    .nav-link {
-      color: #385173;
-      font-family: 'Montserrat', sans-serif;
-    }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
 
-    .hov20t03{
-        transition: transform 0.3s ease;
-    }
-    .hov20t03:hover {
-        transform: scale(1.20);
-        transition: transform 0.3s ease; 
-    }
-    .hov10t03{
-        transition: transform 0.3s ease;
-    }
-    .hov10t03:hover {
-        transform: scale(1.10);
-        transition: transform 0.3s ease; 
-    }
-    .hov05t03 {
-        transition: transform 0.3s ease;
-    }
-    .hov05t03:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease; 
-    }
+  </head>
+  <body>
 
-    .jumbotron {
-      background-color: #F5F2EE;
-      color: #385173;
-      text-align: center;
-      margin-bottom: 0;
-    }
-    .call-to-action {
-      background-color: #BD8445;
-      color: #F5F2EE;
-      padding: 15px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-    }
-    .section {
-      background-color: #F5F2EE;
-      color: #385173;
-      padding: 50px 0;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
-</head>
-<body>
+<!-- Chargement de la page -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="img/logo seul clair.png" alt="Logo OGCAO" class="logoloader">
+    </div>
+    
 
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <div class="logonavbar hov10t03">
-            <img src="img/logo seul.png" alt="Logo OGCAO" class="logonavbar">
-            <img src="img/logo ecrit seul.png" alt="Logo OGCAO" class="logonavbar" style="height: 25px;" >
-        </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-2">
-          <a class="nav-link hov05t03" href="#section1">Nos services</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link hov05t03" href="#section2">Nos réalisations</a>
-        </li>
-        <li class="nav-item mx-2">
-            <a class="nav-link hov05t03" href="#section2">En savoir plus</a>
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container-fluid ms-4">
+      <a class="navbar-brand mx-2" href="#">
+          <div class="logonavbar hov10t03">
+              <img src="img/logo seul.png" alt="Logo OGCAO" class="logonavbar">
+          </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#section1">Services & Expertises</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#realisations">Réalisations</a>
+          </li>
+          <li class="nav-item mx-3">
+              <a class="nav-link" href="#section2">Ressources</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#section2">Contact & Devis</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#section2">En savoir plus</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link-icon px-3" href="https://www.malt.fr/profile/elliottoger" target="_blank">
+                  <img src="img/malt logo.png" alt="Lien vers Profil Malt" class="img-fluid logonavbar">
+                  <span class="link-text start-50 translate-middle" style="background-color: rgba(252, 86, 86, 0.85);">Malt</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link-icon px-3 me-2" href="https://www.linkedin.com/in/elliott-oger-dessinateur-projeteur-cao-independant-freelance/" target="_blank">
+                  <img src="img/linkedin logo.png" alt="Lien vers Profil LinkedIn" class="img-fluid logonavbar">
+                  <span class="link-text start-50 translate-middle" style="background-color: rgba(10, 102, 194, 0.85);">LinkedIn</span>
+              </a>
           </li>
       </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div >
+      <section id="accueil" class="bg-image-fixed align-self-stretch">
+          <div class="container-fluid h-100 align-self-stretch">
+            <div class="d-flex flex-column align-items-center justify-content-center p-5">
+
+                  <div class="div-accueil d-flex flex-column text-center p-5 mb-5 bg-overlay">
+                      <img src="img/logo clair.png" alt="Logo OGCAO" class="img-fluid mb-4 logo">
+                      <button type="button" href="#realisations" class="btn btn-primary btn-lg call-to-action shadow">Voir nos réalisations</button>
+                  </div>
+
+                  <div class="div-accueil row text-center bg-overlay">
+                    <div class="col-md-4 p-5 text-white">
+                      <i class="fa-regular fa-pen-swirl"></i>
+                      <h3 class="mb-4">DESSINATEUR</h3>
+                      <p class="mb-0">Elliott Oger</p>
+                    </div>
+                    <div class="col-md-4 p-5 text-white">
+                      <i class="fa-regular fa-compass-drafting"></i>
+                      <h3 class="mb-4">EXPERTISE</h3>
+                      <p class="mb-0">Travail des Métaux</p>
+                    </div>
+                    <div class="col-md-4 p-5 text-white">
+                      <h3 class="mb-4">OUTIL CAO</h3>
+                      <p class="mb-0">SolidWorks</p>
+                    </div>
+                  </div>
+
+            </div>
+          </div>
+        </section>
   </div>
-</nav>
 
-<!-- Jumbotron -->
-<div >
-    <section id="accueil" class="bg-image-fixed align-self-stretch">
-        <div class="container-fluid h-100 align-self-stretch">
-           <div class="d-flex flex-column align-items-center justify-content-center p-5 mb-5">
 
-                <div class="d-flex flex-column text-center p-5 mb-5 bg-overlay">
-                    <img src="img/logo clair.png" alt="Logo OGCAO" class="img-fluid mb-4 logo">
-                    <a href="#realisations" class="btn btn-primary btn-lg hov05t03 call-to-action shadow">Voir nos réalisations</a>
+  <div id="testimonials" class="carousel slide" data-ride="carousel">
+    <section>
+      <div class="customer-feedback">
+        <div class="container text-center">
+          <div class="row">
+            <div class="offset-2 col-sm-8">
+              <div>
+                <h2 class="section-title">Nos recomendations</h2>
+              </div>
+            </div><!-- /End col -->
+          </div><!-- /End row -->
+    
+          <div class="row">
+            <div class="offset-3 col-md-6 offset-2 col-sm-8">
+              <div class="owl-carousel feedback-slider">
+    
+                <!-- slider item -->
+                <div class="feedback-slider-item">
+                  <img src="img/Photo Profil Philippe.jpg" class="center-block img-circle" alt="Philippe Kemp">
+                  <h3 class="customer-name">Philippe kempczynski</h3>
+                  <h4 class="customer-enterprise">Directeur Technique, Koté Piscine</h4>
+                  <p>« Je collabore avec Elliott sur la conception d'une vanne motorisée, il travaille rapidement avec le sens du détail. les modèles on étés produits en vue de la fabrication de moules pour injection plastique. Je recommande. »</p>
+                  <span class="light-bg customer-rating" data-rating="5">
+                    5
+                    <i class="fa fa-star"></i>
+                  </span>
                 </div>
-
-                <div class="row text-center bg-overlay">
-                    <div class="col-md-3 p-5 mb-4 text-white">
-                            <h3 class="mb-4">DESSINATEUR</h3>
-                            <p class="mb-4">Elliott Oger</p>
-                    </div>
-                    <div class="col-md-3 p-5 mb-4 text-white">
-                            <h3 class="mb-4">DEPUIS</h3>
-                            <p class="mb-4">2018</p>
-                    </div>
-                    <div class="col-md-3 p-5 mb-4 text-white">
-                            <h3 class="mb-4">EXPERTISE</h3>
-                            <p class="mb-4">Travail des Métaux</p>
-                    </div>
-                    <div class="col-md-3 p-5 mb-4 text-white">
-                            <h3 class="mb-4">OUTIL CAO</h3>
-                            <p class="mb-4">SolidWorks</p>
-                    </div>
+                <!-- /slider item -->
+    
+                <!-- slider item -->
+                <div class="feedback-slider-item">
+                  <img src="img/Photo Profil Inconnu.png" class="center-block img-circle" alt="Antoine Dempere">
+                  <h3 class="customer-name">Antoine.</h3>
+                  <h4 class="customer-enterprise">Bureau d'étude, DAMPERE</h4>
+                  <p>« Elliott est très efficace , comprend la demande rapidement , fait des propositions d'améliorations, je suis satisfait d'avoir pu échanger avec lui et je le recommande »</p>
+                  <span class="light-bg customer-rating" data-rating="5">
+                    5
+                    <i class="fa fa-star"></i>
+                  </span>
                 </div>
+                <!-- /slider item -->
 
-           </div>
-        </div>
-      </section>
-      
-      <style>
-        #accueil {
-          background-image: url(img/Background\ Industrie.jpg);
-          background-position: center;
-          background-size: cover;
-          height: 100%
-          position: relative;
-          z-index: -2
-        }
-        .logo {
-          position: relative;
-          width: 300px;
-          height: auto;
-        }
-        .bg-overlay {
-          background-color: rgba(56, 81, 115, 0.7);
-        }
-        .text-white {
-          color: #F5F2EE 
-          
-        }
-        .text-primary {
-          color: #385173;
-        }
-        .bg-white {
-          background-color: #FFFFFF;
-        }
-      </style>
-      
-</div>
+                <!-- slider item -->
+                <div class="feedback-slider-item">
+                  <img src="img/Photo Profil Philippe.jpg" class="center-block img-circle" alt="Philippe Kemp">
+                  <h3 class="customer-name">Philippe kempczynski</h3>
+                  <h4 class="customer-enterprise">Directeur Technique, Koté Piscine</h4>
+                  <p>« Je collabore avec Elliott sur la conception d'une vanne motorisée, il travaille rapidement avec le sens du détail. les modèles on étés produits en vue de la fabrication de moules pour injection plastique. Je recommande. »</p>
+                  <span class="light-bg customer-rating" data-rating="5">
+                    5
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
+                <!-- /slider item -->
+    
+              </div><!-- /End feedback-slider -->
+    
+              <!-- side thumbnail -->
+              <div class="feedback-slider-thumb hidden-xs">
+                <div class="thumb-prev">
+                  <span>
+                    <img src="./img/Photo Profil Philippe.jpg" class="center-block img-circle" alt="Philippe Kemp">
+                  </span>
+                  <span class="light-bg customer-rating">
+                    5
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
+    
+                <div class="thumb-next">
+                  <span>
+                    <img src="img/Photo Profil Inconnu.png" class="center-block img-circle" alt="Antoine Dempere">
+                  </span>
+                  <span class="light-bg customer-rating">
+                    5
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- /side thumbnail -->
+              
+            </div><!-- /End col -->
+          </div><!-- /End row -->
+        </div><!-- /End container -->
+      </div><!-- /End customer-feedback -->
+    </section>
+  </div>
 
-<!-- Call to action -->
-<div class="call-to-action">
-  <h2>Appel à l'action</h2>
-  <p>Un texte incitatif pour encourager les visiteurs à effectuer une action</p>
-  <button type="button" class="btn btn-lg btn-warning">Cliquez ici</button>
-</div>
 
-<!-- Section 1 -->
-<div id="section1" class="section">
-  <h2>Section 1</h2>
-  <p>Un peu de texte pour présenter cette section</p>
-  <button type="button" class="btn btn-lg btn-primary">Un bouton</button>
-</div>
 
-<!-- Section 2 -->
-<div id="section2" class="section">
-  <h2>Section 2</h2>
-  <p>Encore un peu de texte pour présenter cette section</p>
-  <button type="button" class="btn btn-lg btn-success">Un autre bouton</button>
-</div>
-</body>
+    <!-- Call to action -->
+  <div class="call-to-action">
+      <h2>Appel à l'action</h2>
+      <p>Un texte incitatif pour encourager les visiteurs à effectuer une action</p>
+      <button type="button" class="btn btn-lg btn-warning">Cliquez ici</button>
+  </div>
+
+    <!-- Section 1 -->
+  <div id="section1" class="section">
+      <h2>Section 1</h2>
+      <p>Un peu de texte pour présenter cette section</p>
+      <button type="button" class="btn btn-lg btn-primary">Un bouton</button>
+  </div>
+
+    <!-- Section 2 -->
+  <div id="realisations" class="section">
+      <h2>Section 2</h2>
+      <p>Encore un peu de texte pour présenter cette section</p>
+      <button type="button" class="btn btn-lg btn-success">Un autre bouton</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+  </body>
 </html>
