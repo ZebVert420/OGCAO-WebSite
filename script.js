@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
             "<span class='feedback-slider-next'><i class='fa fa-long-arrow-right'></i></span>"
 		],
 		responsive: {
-			// breakpoint from 767 up
+                        // options for screens ≥ 767px
 			767: {
 				nav: true,
 				dots: false
