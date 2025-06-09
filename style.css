@@ -51,7 +51,7 @@
   30% {
     transform: scale(0.5) translateY(80%) rotate(0deg);
   }
-  500% {
+  50% {
     transform: scale(0.5) translateY(80%) rotate(0deg);
   }
   66%{
