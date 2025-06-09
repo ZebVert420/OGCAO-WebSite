@@ -89,33 +89,33 @@
     left: 0;
   }
 
-  .hov20t03{
-      transition: transform 0.3s ease;
+  .scale-hover,
+  .scale-hover-sm,
+  .scale-hover-md,
+  .scale-hover-lg,
+  .scale-hover-half {
+    transition: transform 0.3s ease;
   }
-  .hov20t03:hover {
-      transform: scale(1.20);
-      transition: transform 0.3s ease; 
+
+  .scale-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
-  .hov10t03{
-      transition: transform 0.3s ease;
+
+  .scale-hover-sm:hover {
+    transform: scale(1.05);
   }
-  .hov10t03:hover {
-      transform: scale(1.10);
-      transition: transform 0.3s ease; 
+
+  .scale-hover-md:hover {
+    transform: scale(1.10);
   }
-  .hov05t03 {
-      transition: transform 0.3s ease-in-out;
+
+  .scale-hover-lg:hover {
+    transform: scale(1.20);
   }
-  .hov05t03:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease-in-out; 
-  }
-  .hov-50t03 {
-    transition: transform 0.3s ease-in-out;
-  }
-  .hov-50t03:hover {
-      transform: scale(0.5);
-      transition: transform 0.3s ease-in-out; 
+
+  .scale-hover-half:hover {
+    transform: scale(0.5);
   }
 
   .jumbotron {
