@@ -1,10 +1,11 @@
+:root { --couleur-primaire: #BD8445; --couleur-secondaire: #385173; --couleur-fond: #F5F2EE; }
   /* Styles personnalisés */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
   }
   .navbar-brand {
     font-weight: bold;
-    color: #BD8445;
+    color: var(--couleur-primaire);
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
   }
@@ -26,7 +27,7 @@
     transform: translateY(-80%);
     padding: 5px;
     background-color:  rgba(56, 81, 115, 0.7);
-    color: #F5F2EE;
+    color: var(--couleur-fond);
     font-size: 12px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, Top 0.3s ease-in-out;
@@ -119,15 +120,15 @@
   }
 
   .jumbotron {
-    background-color: #F5F2EE;
-    color: #385173;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-secondaire);
     text-align: center;
     margin-bottom: 0;
   }
   .call-to-action {
-    background-color: #BD8445;
-    color: #F5F2EE;
-    border-color:#BD8445;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-fond);
+    border-color:var(--couleur-primaire);
     transform: scale(1);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
     padding: 15px;
@@ -136,15 +137,15 @@
     font-weight: 700;
   }
   .call-to-action:hover {
-    background-color:#F5F2EE;
-    color:#BD8445;
-    border-color:#BD8445;
+    background-color:var(--couleur-fond);
+    color:var(--couleur-primaire);
+    border-color:var(--couleur-primaire);
     transform: scale(1.05); 
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   .section {
-    background-color: #F5F2EE;
-    color: #385173;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-secondaire);
     padding: 50px 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -170,11 +171,11 @@
     background-color: rgba(56, 81, 115, 0.7);
   }
   .text-white {
-    color: #F5F2EE 
+    color: var(--couleur-fond) 
     
   }
   .text-primary {
-    color: #385173;
+    color: var(--couleur-secondaire);
   }
   .bg-white {
     background-color: #FFFFFF;
@@ -214,15 +215,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #385173;
+    background-color: var(--couleur-secondaire);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .spinner {
-    border: 8px solid #F5F2EE;
-    border-top: 8px solid #BD8445;
+    border: 8px solid var(--couleur-fond);
+    border-top: 8px solid var(--couleur-primaire);
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -302,7 +303,7 @@
   }
   .section-title:after {
     height: 2px;
-    background-color:  #BD8445;
+    background-color:  var(--couleur-primaire);
     left: 25%;
     right: 25%;
   }
@@ -311,7 +312,7 @@
     width: 15px;
     height: 15px;
     border: 3px solid #fff;
-    background-color: #BD8445;
+    background-color: var(--couleur-primaire);
     left: 50%;
     transform: translatex(-50%);
     bottom: -6px;
@@ -376,7 +377,7 @@
   }
   
   .customer-rating i {
-    color: #BD8445;
+    color: var(--couleur-primaire);
     position: absolute;
     top: 10px;
     right: 5px;
@@ -393,7 +394,7 @@
     bottom: 0;
     top: 103px;
     background-color: #f6f6f6;
-    border: 1px solid #BD8445;
+    border: 1px solid var(--couleur-primaire);
     border-radius: 10px;
     z-index: -1;
   }
@@ -437,7 +438,7 @@
   
   .customer-feedback .owl-nav i {
     background-color: transparent;
-    color: #BD8445;
+    color: var(--couleur-primaire);
     font-size: 25px;
   }
   
@@ -473,7 +474,7 @@
     height: 11px;
     margin: 0 5px;
     background: #fff;
-    border: 1px solid #BD8445;
+    border: 1px solid var(--couleur-primaire);
     display: block;
     backface-visibility: visible;
     transition: all 2000ms ease;
@@ -481,7 +482,7 @@
   }
   
   .customer-feedback .owl-dots .owl-dot.active span {
-    background-color: #BD8445;
+    background-color: var(--couleur-primaire);
   }
   
   /* RESPONSIVE */
